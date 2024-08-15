@@ -200,14 +200,6 @@ function showNews(type) {
         sportsTab.classList.remove('tab-active');
         technologyTab.classList.add('bg-gray-200');
         technologyTab.classList.remove('tab-active');
-    } else if (type === 'technology') {
-        fetchRSS('https://www.tasnimnews.com/fa/rss/feed/0/7/6/%D8%A7%D8%B3%D8%AA%D8%A7%D9%86%D9%87%D8%A7', newsContainer);
-        technologyTab.classList.add('tab-active');
-        technologyTab.classList.remove('bg-gray-200');
-        sportsTab.classList.add('bg-gray-200');
-        sportsTab.classList.remove('tab-active');
-        topNewsTab.classList.add('bg-gray-200');
-        topNewsTab.classList.remove('tab-active');
     }
 }
 
@@ -217,7 +209,6 @@ fetchRSS('https://www.varzesh3.com/rss/all', document.getElementById('news-conta
 // متصل کردن رویدادها به دکمه‌ها
 sportsTab.addEventListener('click', () => showNews('sports')); https://www.isna.ir/rss
 topNewsTab.addEventListener('click', () => showNews('top'));
-technologyTab.addEventListener('click', () => showNews('technology')); // متصل کردن رویداد به تب جدید
 
 const cityName = document.getElementById("cityName");
 const timeDisplay = document.getElementById("timeDisplay");
